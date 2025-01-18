@@ -1,13 +1,13 @@
 # OPM_coreg
 Pipeline for OPM coregistration using MRI anatomy and 3D printed helmets to get array geometry
 
-## Software needed:
+### Software needed:
 - Matlab
 - FieldTrip
 - [MeshLab](https://www.meshlab.net/ ): 
 - Python with [PyMeshlab package](https://pymeshlab.readthedocs.io/en/latest/) installed in environment 
 
-## Data needed:
+### Data needed:
 - Anatomical MRI (.nii)
 - Einscan of participant wearing helmet (saved as .ply or .stl)
 - .stl/.ply of helmet used
