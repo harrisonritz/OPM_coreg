@@ -1,27 +1,28 @@
 # OPM_coreg
 Pipeline for OPM coregistration using MRI anatomy and 3D printed helmets to get array geometry
 
-Software needed:
+## Software needed:
 - Matlab
 - FieldTrip
-- MeshLab https://www.meshlab.net/ 
-- Python with PyMeshlab package installed in environment https://pymeshlab.readthedocs.io/en/latest/
+- [MeshLab](https://www.meshlab.net/ ): 
+- Python with [PyMeshlab package](https://pymeshlab.readthedocs.io/en/latest/) installed in environment 
 
-Data needed:
+## Data needed:
 - Anatomical MRI (.nii)
 - Einscan of participant wearing helmet (saved as .ply or .stl)
 - .stl/.ply of helmet used
 - Locations and orientations of sensors in the corresponding helmet (for later analysis)
 
-Get mesh of scalp from MRI (get .ply from .nii):
-- Run 'get_mri_mesh.m', ensuring correct paths for fieldtrip and project directory
+## Step 1. Get mesh of scalp from MRI (get .ply from .nii):
+- Run `get_mri_mesh.m`, ensuring correct paths for fieldtrip and project directory
 - Select '.nii' for MRI 
 - A figure will come up
 - In the command window type y, press enter then type:
 - r (press enter), a (press enter), s (press enter), n (press enter)
 - This should then segment the MRI (takes a few minutes) and plot the point cloud of scalp points
 
-Run 'coregistration_meshlab.py' ensuring correct paths and PyMeshlab installed
+## Step 2. Coregister to scalp:
+- Run `coregistration_meshlab.py` ensuring correct paths and PyMeshlab installed
 - Select the Einscan with the participant wearing the helmet
 - Select the scalp points file made from the get_mri_mesh script
 - Select the helmet file used
